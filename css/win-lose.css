@@ -1,0 +1,89 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Root Global CSS Variables */
+:root {
+    --buttons: #8264B2;
+    --answer-select: #6F4077;
+    --correct: #649E5A;
+    --incorrect: #AE4646;
+    --default-font: #5B4482;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 10% 30%;
+    color: var(--default-font);
+}
+
+.win-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+h2, h3 {
+    font-size: 1.25rem;
+}
+
+.win-img {
+    width: 18rem;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.lose-img {
+    width: 13rem;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+
+    body {
+        background-color: #433162;
+    }
+    .card {
+        background-color: #fff;
+        position: fixed;
+        width: 375px;
+        height: 655px;                      
+        border-radius: 2%;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-color: #433162;
+    }
+    .card {
+        background-color: #fff;
+        position: fixed;
+        width: 375px;
+        height: 655px;                      
+        border-radius: 2%;
+    }
+    
+}
+
+@media all and (min-width: 375px) and (max-width: 767px) {
+    .card {
+        background-color: #fff;
+    }
+}

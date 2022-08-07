@@ -1,0 +1,95 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Root Global CSS Variables */
+:root {
+    --buttons: #8264B2;
+    --answer-select: #6F4077;
+    --correct: #649E5A;
+    --incorrect: #AE4646;
+    --default-font: #5B4482;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 15% 30%;
+}
+
+.img-chess {
+    margin-top: 20%;
+    width: 85%;
+    height: auto;
+    padding-bottom: 0.25rem;
+}
+
+/* Button */
+
+.btn {
+    text-decoration: none;
+    background-color: var(--buttons);
+    color: #fff;
+    padding: 8% 20%;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    box-shadow: 8px 8px 20px 0px #30234471;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #8f559a;
+}
+
+.btn:active {
+    background-color: var(--answer-select);
+} 
+
+/* Media Queries */
+
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+
+    body {
+        background-color: #433162;
+    }
+    .container {
+        background-color: #fff;
+        position: fixed;
+        width: 375px;
+        height: 575px;
+        border-radius: 2%;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-color: #433162;
+    }
+    .container {
+        background-color: #fff;
+        position: fixed;
+        width: 375px;
+        height: 575px;
+        border-radius: 2%;
+        margin: 15% 25%;
+    }
+}
+
+@media all and (min-width: 375px) and (max-width: 767px) {
+    .container {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        margin: 0% auto;
+    }
+
+    .img-chess {
+        margin-top: 7rem;
+    }
+}
