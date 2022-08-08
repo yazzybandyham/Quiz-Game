@@ -15,6 +15,10 @@ body {
     margin: 0 auto;
 }
 
+.hidden {
+    display: none;
+}
+
 .clock {
     position: absolute;
     right: 10%;
@@ -53,13 +57,15 @@ body {
     margin-top: 0.75rem;
     font-weight: 400;
     font-size: 0.75rem;
-    box-shadow: 8px 8px 20px 0px #30234471;
-    cursor: pointer;
     border-radius: 5px;
 }
 
 .answer:hover {
     background-color: #8f559a;
+    cursor: pointer;
+    box-shadow: 8px 8px 20px 0px #30234471;
+    transform: translateY(-0.1rem);
+    transition: transform 200ms;
 }
 
 /* answer selected */
@@ -93,6 +99,12 @@ body {
     box-shadow: 8px 8px 20px 0px #30234471;
     cursor: pointer;
 }
+
+/* .btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+} */
 
 /* Media Queries */
 
