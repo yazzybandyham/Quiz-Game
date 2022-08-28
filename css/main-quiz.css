@@ -48,7 +48,9 @@ body {
     align-items: center;
     margin-top: 7rem;
 }
-
+.choice-text {
+    width: 100%;
+}
 .answer {
     text-decoration: none;
     background-color: var(--buttons);

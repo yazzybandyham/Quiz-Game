@@ -5,7 +5,7 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 //Object variable
 let currentQuestion = {};
 //Variable for accepting answers
-let acceptingAnswers = true; //to create short delay after answering before revealing outcome
+let acceptingAnswers = false; //to create short delay after answering before revealing outcome
 let score = 0;
 let questionCounter = 0;
 //for hard coded questions and answers
@@ -51,11 +51,29 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
-
     questionCounter++;
 
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length); //cycles through questions
-    currentQuestion = availableQuestions[questionIndex];
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length); //cycles through questions
+    currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question; //pushes the question into DOM
 
-}
+    //displays answer choices
+    choices.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true; //allows user to select answers once game starts
+};
+
+choices.forEach( choice => {
+    choice.addEventListener('click', e => {
+        if(!acceptingAnswers) return;
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selctedAnswer = selectedChoice.dataset['number'];
+        getNewQuestion();
+    })
+})
