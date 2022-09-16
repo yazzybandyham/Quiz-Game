@@ -18,26 +18,31 @@
         <img class="clock" src="/assets/images/Timer.png" alt="timer">
     </header>
 
-   <div class="quiz-container">
-     <!-- Questions -->
-     <section class="questions">
-        <p id="question"></p>
-    </section>
-
     <!-- Answers -->
     <section class="answers-container">
-        <a href="" class="answer btn"><p class="choice-prefix">A</p>
-            <p class="choice-text" data-number="1"></p></a>
-        <a href="" class="answer btn"><p class="choice-prefix">B</p>
-            <p class="choice-text" data-number="2"></p></a>
-        <a href="" class="answer btn"><p class="choice-prefix">C</p>
-            <p class="choice-text" data-number="3"></p></a>
-        <a href="" class="answer btn"><p class="choice-prefix">D</p>
-            <p class="choice-text" data-number="4"></p></a>
+        <div id="game" class="justify-center flex-column">
+            <h2 id="question"></h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+        </div>
     </section>
    </div>
 </div>
 <!-- <script type="module" src="/js/countdownTimer.js" defer></script> -->
-    <script type="module" src="js/gameapp.js" defer></script>
+    <script src="/js/gameapp.js"></script>
 </body> 
 </html>

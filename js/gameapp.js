@@ -18,7 +18,7 @@ let questions = [
         choice2: '<javascript>',
         choice3: '<js>',
         choice4: '<scripting>',
-        answer: 1,
+        answer: 1
     },
     {
         question:
@@ -27,7 +27,7 @@ let questions = [
         choice2: "<script name='xxx.js'>",
         choice3: "<script src='xxx.js'>",
         choice4: "<script file='xxx.js'>",
-        answer: 3,
+        answer: 3
     },
     {
         question: " How do you write 'Hello World' in an alert box?",
@@ -35,13 +35,13 @@ let questions = [
         choice2: "alertBox('Hello World');",
         choice3: "msg('Hello World');",
         choice4: "alert('Hello World');",
-        answer: 4,
-    },
+        answer: 4
+    }
 ];
 
 //CONSTANTS
 const CORRECT_BONUS = 5; //points received for correct answers
-const MAX_QUESTIONS = 15; //how many questions user will be asked before end of quiz
+const MAX_QUESTIONS = 3; //how many questions user will be asked before end of quiz
 
 startGame = () => {
     questionCounter = 0;
@@ -51,29 +51,39 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
+
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        //go to the end of page
+        return window.location.assign('/correct.html');
+    }
+
     questionCounter++;
+    
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length); //brings up random question from available questions
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerHTML = currentQuestion.question; //pushes random question into HTML
 
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length); //cycles through questions
-    currentQuestion = availableQuesions[questionIndex];
-    question.innerText = currentQuestion.question; //pushes the question into DOM
-
-    //displays answer choices
-    choices.forEach((choice) => {
+    choices.forEach((choice) => { //pushes answers into data-number sets in HTML
         const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
+        choice.innerHTML = currentQuestion['choice' + number];
     });
 
-    availableQuestions.splice(questionIndex, 1);
-
-    acceptingAnswers = true; //allows user to select answers once game starts
+    availableQuestions.splice(questionIndex, 1); //removes asked question so question isn't repeated
+    acceptingAnswers = true;
 };
 
-choices.forEach( choice => {
-    choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
-        acceptingAnswers = false;
+//grabs user answer choice information to see which one was selected
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+       if(!acceptingAnswers) return;
+
+       acceptingAnswers = false;
         const selectedChoice = e.target;
-        const selctedAnswer = selectedChoice.dataset['number'];
-        getNewQuestion();
-    })
-})
+        const selectedAnswer = selectedChoice.dataset['number']; 
+
+       getNewQuestion(); //after answer is selected we get a new question
+    });
+});
+
+
+

@@ -32,48 +32,57 @@ body {
     font-size: 1.25rem;
 }
 
-.questions {
+#question {
     color: var(--default-font);
     font-weight: 600;
-    display: inline-block;
-    margin-top: 8rem;
-    margin-left: 7rem;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    margin: 3rem 0rem;
 }
 
-/* Buttons */
+/* Answers Section */
 
 .answers-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7rem;
-}
-.choice-text {
-    width: 100%;
-}
-.answer {
-    text-decoration: none;
-    background-color: var(--buttons);
-    color: #fff;
-    padding: 7% 30%; 
-    margin-top: 0.75rem;
-    font-weight: 400;
-    font-size: 0.75rem;
-    border-radius: 5px;
+    margin: 8rem 1.5em;
 }
 
-.answer:hover {
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color:#fff;
+    color: var(--default-font);
+}
+
+.choice-container:hover {
     background-color: #8f559a;
+    color: #fff;
     cursor: pointer;
     box-shadow: 8px 8px 20px 0px #30234471;
     transform: translateY(-0.1rem);
     transition: transform 200ms;
 }
-
 /* answer selected */
-.answer:active {
+.choice-container:active {
     background-color: var(--answer-select);
 } 
+
+.choice-prefix {
+    padding: 1rem 2rem;
+    background-color: var(--buttons);
+    color: #fff;
+}
+
+.choice-text {
+    padding: 1rem;
+    width: 100%;
+}
+
+
 
 /* displays when correct answer is selected */
 .correct {
@@ -110,18 +119,21 @@ body {
 
 /* Media Queries */
 
-@media all and (min-width: 1024px) and (max-width: 1440px) {
+@media all and (min-width: 1024px) and (max-width: 2560px) {
 
     body {
         background-color: #433162;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10% auto;
     }
     .container {
         background-color: #fff;
         position: fixed;
-        width: 375px;
-        height: 575px;
+        width: 600px;
+        height: 750px;
         border-radius: 2%;
-        margin: 15% 32%;
     }
     .clock {
         width: 8%;
