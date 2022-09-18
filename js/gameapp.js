@@ -84,6 +84,3 @@ choices.forEach((choice) => {
        getNewQuestion(); //after answer is selected we get a new question
     });
 });
-
-
-
