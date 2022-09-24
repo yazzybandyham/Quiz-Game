@@ -1,12 +1,26 @@
+/* Root Global CSS Variables */
+:root {
+  --buttons: #8264B2;
+  --answer-select: #6F4077;
+  --correct: #649E5A;
+  --incorrect: #AE4646;
+  --default-font: #5B4482;
+}
+
 #highScoresList {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .img-score {
+    height: 10rem;
   }
   
   .high-score {
-    font-size: 2.8rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
+    color: var(--default-font);
   }
   
   .high-score:hover {

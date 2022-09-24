@@ -14,8 +14,8 @@
   align-items: center;
   padding: 2rem;
 
-  width: 700px;
-  height: 850px;
+  width: 600px;
+  height: 750px;
   position: absolute;
   top:0;
   bottom: 0;
@@ -25,13 +25,26 @@
   margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .game-container {                     
+      height: 100vh;
+      width: 100vw;
+  }
+}
+
 .choice-container {
   display: flex;
+  max-width: 25rem;
   margin-bottom: 0.5rem;
-  /* width: 100%; */
-  font-size: 1.8rem;
+  font-size: 1rem;
   border: 0.1rem solid var(--buttons);
   background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .choice-container {
+    max-width: 20rem;
+  }
 }
 
 .choice-container:hover {
@@ -48,7 +61,7 @@
 }
 
 .choice-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--default-font);
   padding: 1rem;
   width: 100%;
@@ -69,8 +82,16 @@
   justify-content: space-between;
   padding-bottom: 3rem;
 }
+
 #hud-item {
   margin-inline-end: 5rem;
+  color: var(--default-font);
+}
+
+@media screen and (max-width: 768px) {
+  #hud-item {
+    margin-inline-end: 2rem;
+  }
 }
 
 .hud-prefix {
@@ -93,6 +114,18 @@
   height: 2rem;
   background-color: var(--answer-select);
   width: 0%;
+}
+
+#question {
+  color: var(--default-font);
+  font-size: 1rem;
+  max-width: 25rem;
+}
+
+@media screen and (max-width: 768px) {
+  #question {
+    max-width: 20rem;
+  }
 }
 
 /* LOADER */
