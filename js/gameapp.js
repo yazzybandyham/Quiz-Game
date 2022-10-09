@@ -13,6 +13,7 @@ let availableQuesions = [];
 
 let questions = [];
 
+// api intergration or loading quiz data
 fetch(
     'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
 )
@@ -48,7 +49,7 @@ fetch(
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 15;
 
 startGame = () => {
     questionCounter = 0;
