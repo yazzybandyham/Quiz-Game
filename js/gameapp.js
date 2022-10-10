@@ -15,7 +15,7 @@ let questions = [];
 
 // api intergration or loading quiz data
 fetch(
-    'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
+'https://opentdb.com/api.php?amount=50&type=multiple'
 )
     .then((res) => {
         return res.json();
