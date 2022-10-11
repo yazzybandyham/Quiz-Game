@@ -23,9 +23,6 @@ Font Weight:
 - Semi-bold: 600
 - Bold: 700
 
-HTML link:
-<link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap)" rel="stylesheet">
-
 CSS link:
 @import url('[https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap)');
 
@@ -33,12 +30,12 @@ CSS link:
 
 * * *
 
-Start, Answer and Play Again Buttons - #8264B2
-Font Default - #5B4482
-Answer Select - #6F4077
-Correct - #649E5A
-Incorrect - #AE4646
-Text on Buttons - #FFFFFF
+- Start, Answer and Play Again Buttons - #8264B2
+- Font Default - #5B4482
+- Answer Select - #6F4077
+- Correct - #649E5A
+- Incorrect - #AE4646
+- Text on Buttons - #FFFFFF
 
 ### Stack
 
