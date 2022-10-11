@@ -41,8 +41,8 @@ CSS link:
 
 * * *
 
--HTML
+- HTML
 
--CSS
+- CSS
 
--Vanilla JavaScript
+- Vanilla JavaScript
